@@ -1,0 +1,592 @@
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    /* Set a gradient background color */
+    background: linear-gradient(to bottom, #ffffff, #E7E7E9);
+    /* Optional: set a fallback solid color in case the gradient is not supported */
+    background-color: #DFDFDF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Floating WhatsApp Icon */
+.floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Call Options (Initially Hidden) */
+.call-options {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.call-button {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.call-button i {
+    margin-right: 10px;
+}
+
+/* WhatsApp Call Button */
+.whatsapp-call {
+    background-color: #25d366;
+}
+
+.whatsapp-call:hover {
+    background-color: #1ebe56;
+}
+
+/* Direct Call Button */
+.direct-call {
+    background-color: #056579;
+}
+
+.direct-call:hover {
+    background-color: #ff5e00;
+}
+
+/* Show Call Options when clicked */
+.show-options {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+.csr-content{
+    padding:20px;
+}
+
+
+
+
+
+
+h5{
+    color: #555;
+    text-align: left;
+    font-size: 0.8rem;
+    margin-left: 20px;
+}
+
+
+
+
+
+.section-title {
+    font-weight: bold;
+    font-size: 2rem;
+    }
+    .section-hr {
+        border: none;
+        height: 3px; /* Set thickness */
+        background-color: #DE262C; /* Fully solid color */
+        width: 50px; /* Adjust width as needed */
+        margin: 10px auto; /* Center the line */
+        opacity: 1; /* Ensure full opacity */
+    }
+    
+
+
+
+
+
+
+
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    border-bottom: 3px solid #196B9D;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Logo */
+.logo img {
+    height: 60px;
+}
+
+/* Nav Links Styling */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #DE262C;
+    font-weight: 700;
+    transition: color 0.3s;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #196B9D;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+}
+
+.down-arrow {
+    margin-left: 5px; /* Space between link text and arrow */
+}
+
+.dropdown-content {
+    display: none; /* Keep it hidden by default */
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+.dropdown-content a {
+    color: #D7222E;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.divider {
+    height: 1px; /* Height of the divider */
+    background-color: #D7222E; /* Color of the divider */
+    margin: 5px 0; /* Space above and below the divider */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+
+/* Animated Menu Icon for Mobile */
+.menu-icon {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    z-index: 102;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #000000;
+    transition: 0.3s;
+}
+
+/* Transform to Close Icon */
+.menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Navigation Styling */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #D7222E;
+    padding: 60px 20px 20px; /* Add padding at the top */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 101;
+}
+.mobile-nav .nav-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Underline effect */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.mobile-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* Overlay Styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+/* Toggle Active States */
+.mobile-nav.active {
+    transform: translateX(0);
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown styling in mobile nav */
+.mobile-dropdown {
+    position: relative;
+}
+
+.mobile-submenu {
+    display: none;
+    padding-left: 20px;
+    margin-bottom: -10px;
+    padding-top: 10px;
+    list-style-type: disc;
+    color: #fff;
+}
+
+.mobile-submenu.active {
+    display: block; /* Show submenu when active */
+}
+
+
+.mobile-dropdown.active .mobile-submenu {
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    .mobile-submenu li {
+        margin-bottom: 8px;
+        color: white; /* Set text color to white */
+    }
+
+    .mobile-submenu li::marker {
+        color: white; /* Set bullet color to white */
+    }
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the icons */
+    margin-top: 20px; /* Space above the icons */
+}
+
+
+.social-media a {
+    color: #fff; /* White color for the icons */
+    font-size: 1.5em; /* Size of the icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-media a:hover {
+    color: #D7222E; /* Change color on hover */
+}
+
+.apply-now {
+    display: block;
+    background-color: #D7222E; /* Button color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.apply-now:hover {
+    background-color: #196B9D; /* Change button color on hover */
+}
+/* Close Button CSS */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 33px;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    z-index: 110;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: pulse 1.5s infinite ease-in-out; /* Pulse animation */
+}
+
+/* Hover effect - rotate */
+.close-btn:hover {
+    color: #ffffff;
+    transform: rotate(90deg) scale(1.2); /* Rotate and scale slightly on hover */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Slightly enlarges in the middle of the animation */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem; /* Adjust this size as needed for mobile */
+        font-weight: bold;
+    }
+}
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+
+/* Gallery Styles */
+.gallery-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Default to desktop layout */
+    gap: 15px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal for zoomable images */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 90px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Image Content */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Reduced to make it fit better on desktop */
+    max-height: 80vh; /* Ensure image fits within viewport height */
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-content:hover {
+    transform: scale(1.02);
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 50px;    /* Reduced distance from the top */
+    right: 40px;  /* Reduced distance from the right */
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;  /* Ensure it stays above the image */
+}
+
+/* For medium desktops (992px to 1199px) */
+@media (min-width: 772px) {
+    /* Styles specific to medium desktops */
+    .close {
+        right: 550px;  /* Reduced distance from the right */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.top{
+    padding-top: 130px!important;
+    background-color: #f4f4f4;
+}
+
+
+
+
+
+
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark background for the footer */
+    color: white; /* White text color */
+    border-top: 4px solid #DE262C; /* Top border for a modern touch */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Uniform font size */
+}
